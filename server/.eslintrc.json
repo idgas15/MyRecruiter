@@ -1,0 +1,7 @@
+{
+    "extends": "standard",
+    "rules": {
+        "no-trailing-spaces": "warn",
+        "indent":"off"
+    }
+}
