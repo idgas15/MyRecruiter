@@ -2,7 +2,7 @@ const MongoClient = require('mongodb').MongoClient
 const ObjectId = require('mongodb').ObjectID
 const Recruiter = require('../../models/recruiter.model')
 const utilities = require('../../utilities/string')
-const mongoConnectionString = 'mongodb://localhost:27017/myrecruiter'
+const mongoConnectionString = process.env.DB_CONNECTION_STRING
 
 function GetCollection (res, collection, id = null, query = {}) {
     MongoClient.connect(mongoConnectionString, { useNewUrlParser: true }, (err, client) => {
@@ -12,7 +12,7 @@ function GetCollection (res, collection, id = null, query = {}) {
                 error: err
             })
         }
-        const db = client.db('myrecruiter')
+        const db = client.db(process.env.DB_NAME)
         const dbCollection = db.collection(collection)
         if (id) {
             dbCollection.find({ '_id': ObjectId(id) }).toArray((err, recruiters) => {
@@ -50,7 +50,7 @@ function PostCollection (res, collection, id = null, data = {}) {
                 error: err
             })
         }
-        const db = client.db('myrecruiter')
+        const db = client.db(process.env.DB_NAME)
         const dbCollection = db.collection(collection)
 
         const requestPayload = new Recruiter(data)
@@ -112,7 +112,7 @@ exports.delete = (req, res) => {
                 error: err
             })
         }
-        const db = client.db('myrecruiter')
+        const db = client.db(process.env.DB_NAME)
         const dbCollection = db.collection('recruiter')
         const id = req.params.id
 

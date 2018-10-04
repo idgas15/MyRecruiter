@@ -1,6 +1,6 @@
-# client
+# MyRecruiter - client
 
-> A Vue.js project
+This is a Vue project for MyRecruiter
 
 ## Build Setup
 
@@ -18,4 +18,5 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Known Issues
+Currently, the site is running on mock data due to issue connecting to server (cough... Learning Curve). If the page is refreshed all data will be lost. Sever is functioning properly.

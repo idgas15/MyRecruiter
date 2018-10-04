@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "23859b20-8359-4138-a0a8-aa09992a5574",
+		"name": "MyRecruiter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Recruiters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:5000/api/recruiter",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recruiter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRecruiterById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost:5000/api/recruiter/5bb3c5616568ad14e5b9ce8b",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recruiter",
+						"5bb3c5616568ad14e5b9ce8b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRecruiterByEmail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:5000/api/recruiter/email/john.smith%40test.com",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recruiter",
+						"email",
+						"john.smith%40test.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateRecruiter",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n        \"name\": \"Tony Stark\",\n        \"email\": \"tony.stark@avengers.com\",\n        \"phone\": \"5559874952\",\n        \"linkedInProfile\": \"tonystark\",\n        \"initialContact\": \"2018-10-02T15:30:00\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/api/recruiter/",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recruiter",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Recruiter",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n        \"name\": \"Tony Stark\",\n        \"email\": \"tony.stark@avengers.com\",\n        \"phone\": \"5559874952\",\n        \"linkedInProfile\": \"tonystark\",\n        \"initialContact\": \"2018-10-02T15:30:00\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/api/recruiter/5bb3c5616568ad14e5b9ce8b",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recruiter",
+						"5bb3c5616568ad14e5b9ce8b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Rectruiter",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:5000/api/recruiter/5bb5816f8acc51d610ad5458",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"recruiter",
+						"5bb5816f8acc51d610ad5458"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

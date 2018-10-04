@@ -2,11 +2,13 @@ const utilities = require('../utilities/string')
 
 class Recruiter {
     constructor (recruiter) {
-        this._id = recruiter._id
-        this.name = recruiter.name
-        this.email = recruiter.email
-        this.phone = recruiter.phone
-        this.linkedInProfile = recruiter.linkedInProfile
+        this._id = recruiter && recruiter !== null ? recruiter._id : null
+        this.name = recruiter && recruiter !== null ? recruiter.name : null
+        this.email = recruiter && recruiter !== null ? recruiter.email : null
+        this.phone = recruiter && recruiter !== null ? recruiter.phone : null
+        this.linkedInProfile = recruiter && recruiter !== null ? recruiter.linkedInProfile : null
+        this.company = recruiter && recruiter !== null ? recruiter.company : null
+        this.notes = recruiter && recruiter !== null ? recruiter.notes : null
     }
     get isValid () {
         if (utilities.isNullOrEmpty(this.name) || utilities.isNullOrEmpty(this.email)) {

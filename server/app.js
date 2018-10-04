@@ -1,6 +1,7 @@
 const express = require('express')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
+require('dotenv').config()
 
 const app = express()
 
@@ -24,5 +25,5 @@ app.use((req, res, next) => {
 })
 
 app.listen(port, () => {
-    console.log(`API server listening on localhost:${port}`)
+    console.log(`API server listening on ${process.env.HOST}:${port}`)
 })
